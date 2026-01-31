@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seung World</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: auto;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER SECTION */
+    .head {
+      height: 35vh;
+      width: 100%;
+      background-image: url("seung.jpg");
+      background-size: cover;
+      border: 1px solid white;
+      box-shadow: 0 10px 20px darkblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size:25px;
+    }
+
+    /* NAVBAR BUTTONS (AESTHETIC) */
+    .navbar {
+      height: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 5px;
+    }
+
+    .btn {
+      color: white;
+      background:none;
+    border:none;
+      padding: 5px 15px;
+      margin-right: 10px;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      font-size: 18px;
+      cursor: pointer;
+      text-shadow: 0 2px blue;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(0, 110, 255, 0.6);
+      box-shadow: 0 0 12px rgba(0, 110, 255, 0.8);
+      transform: scale(1.05);
+    }
+
+    /* MAIN HEADING */
+    .container {
+      text-align: center;
+      color: white;
+      text-shadow: 0 2px blue;
+      margin-bottom: 20px;
+    }
+
+    /* BIO SECTION */
+    .box {
+  width: 100%;
+  height: 40vh;
+  color: white;
+  text-shadow: 0 2px blue;
+  border: 1px solid white;
+  background-image: url("seung.jpg");
+  background-size: cover;
+  padding: 0;
+  box-shadow: 0 10px 20px darkblue;
+  margin-top: 30px;
+  text-align: center;
+  font-size:25px;
+
+  /* REMOVE FLEX */
+  display: block;
+  position: relative;
+}
+.box-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+    }
+
+    /* DETAILS BOX */
+    .font {
+      width: 100%;
+      height: 40px;
+      border: 1px solid white;
+      color: white;
+      text-shadow: 0 2px blue;
+      box-shadow: 0 10px 20px darkblue;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* BUTTON BOX */
+    .buttonbox {
+      width: 100%;
+      padding: 20px 0;
+      background-image: url("seung.jpg");
+      background-size: cover;
+      box-shadow: 0 10px 20px darkblue;
+      display: grid;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /* MAIN BUTTONS (GLOW + AESTHETIC) */
+    .picture {
+      width: 300px;
+      height: 60px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      font-size: 20px;
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-shadow: 0 2px blue;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    
+    }
+
+    .picture:hover {
+      background: rgba(0,110,255,0.7);
+      box-shadow: 0 0 20px rgba(0,110,255,1);
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    .final {
+      width: 100%;
+      text-align: center;
+      color: white;
+      margin: 20px 0;
+      text-shadow: 0 2px blue;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <div class="head">
+    <div class="navbar">
+      <button class="btn" onclick="openpage()">Home</button>
+      <button class="btn" onclick="callme()">Contact Me</button>
+      <button class="btn" onclick="ex()">Exit</button>
+    </div>
+
+    <div class="container">
+      <h1>Seung World</h1>
+      <h3>Welcome Buddy</h3>
+    </div>
+  </div>
+
+  <!-- BIO SECTION -->
+
+  <div class="box">
+      <div class="box-content">
+    <h2>"Bio"</h2>
+    <h4>Royal Entry in 2006</h4>
+    <h4>Stay Cool, Stay Classy</h4>
+    <h4>Strongest</h4>
+    <h4>Little Web Developer</h4>
+    </div>
+  </div>
+
+  <div class="font">
+    <h2>Details</h2>
+  </div>
+
+  <!-- BUTTON BOX -->
+
+  <div class="buttonbox">
+    <button class="picture" onclick="openpic()">My Picture ✿</button>
+    <button class="picture" onclick="openwplink()">WhatsApp ✿</button>
+    <button class="picture" onclick="openinlink()">Instagram ✿</button>
+  </div>
+
+  <!-- FOOTER -->
+
+  <div class="final">
+    <p>Edit by darkstormxx</p>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  function openpage() {
+    window.location.href = "index.html";
+  }
+
+  function openwplink() {
+    window.location.href = "index(wp).html";
+  }
+
+  function openinlink() {
+    window.open("https://www.instagram.com/darkstormxx");
+  }
+
+  function openpic() {
+    window.location.href = "index(pic).html";
+  }
+
+  function callme() {
+    window.location.href = "tel:7017031453";
+  }
+
+  function ex() {
+    history.back(); // Safe exit
+  }
+</script>
